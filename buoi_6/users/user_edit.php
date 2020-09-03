@@ -1,6 +1,7 @@
 <?php
 //var_dump($_GET);
 include 'connect.php';
+$conn = connect();
 $id = $_GET['id'];
 // Viết câu lệnh để thêm dữ liệu
 $query = "SELECT * from users WHERE id = ". $id;
@@ -48,7 +49,7 @@ $user = $result->fetch_assoc();
             <label for="">Avatar</label>
             <input type="text" class="form-control" id="" placeholder="" name="avatar" value="<?php echo $user['avatar'];?>">
         </div>
-        <button type="submit" class="btn btn-primary">Create</button>
+        <button type="submit" class="btn btn-primary">Update</button>
     </form>
 </div>
 </body>

@@ -1,42 +1,31 @@
 <?php
 //Thông số kết nối CSDL
-$severname = 'localhost';
-
-$username = 'root';
-
-$password = '';
-
-$dbname = 'db_test';
-
-//tạo kết nối đến CSDL
-$conn = new mysqli($severname, $username, $password, $dbname);
-
-if ($conn -> connect_errno) {
-    echo 'Failed to connect to MySQL: ' . $conn->connect_error;
-    exit();
-}
-//echo 'thành công!';
+include '../helpers/sql.php';
+$categories = select('categories');
+//$conn = connect();
+////echo 'thành công!';
+////
+////die();
 //
-//die();
-
-//Câu lệnh tru vấn
-$query = 'SELECT * FROM categories WHERE 1';
-//$user_pwd = 1;
-//$query = "UPDATE `users` SET `id`= '1234' WHERE users.id = " .  $user_pwd;
-
-//echo $query;
-//die();
-// Thực thi câu lệnh
-$result = $conn->query($query);
-
-//tạo 1 mảng để chứa dữ liệu
-$categories = array();
-while ($row = $result->fetch_assoc()) {
-    $categories[] = $row;
-}
+////Câu lệnh tru vấn
+//$query = 'SELECT * FROM categories WHERE 1';
+////$user_pwd = 1;
+////$query = "UPDATE `users` SET `id`= '1234' WHERE users.id = " .  $user_pwd;
+//
+////echo $query;
+////die();
+//// Thực thi câu lệnh
+//$result = $conn->query($query);
+//
+////tạo 1 mảng để chứa dữ liệu
+//$categories = array();
+//while ($row = $result->fetch_assoc()) {
+//    $categories[] = $row;
+//}
 //echo '<pre>';
-//var_dump($users);
+//var_dump($categories);
 //echo '</pre>';
+//die();
 ?>
 
 <!DOCTYPE html>

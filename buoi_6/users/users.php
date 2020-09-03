@@ -1,17 +1,6 @@
 <?php
-include 'connect.php';
-$query = "SELECT * FROM users WHERE 1";
-//echo $query;
-
-$result = $conn->query($query);
-//Tạo mangt chứa dữ liệu
-$users = array();
-while ($row = $result->fetch_assoc()) {
-    $users[] = $row;
-}
-//echo '<pre>';
-//var_dump($users);
-//echo '</pre>';
+include '../helpers/sql.php';
+$users = select('users');
 ?>
 
 <!DOCTYPE html>

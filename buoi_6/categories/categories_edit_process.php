@@ -2,7 +2,7 @@
 // Lấy dữ liệu từ form gửi lên, gán vào biến data
 
 include 'connect.php';
-
+$conn = connect();
 $data = $_POST;
 $id = $data['id'];
 

@@ -1,6 +1,7 @@
 <?php
 //var_dump($_GET);
 include 'connect.php';
+$conn = connect();
 $id = $_GET['id'];
 // Viết câu lệnh để thêm dữ liệu
 $query = "SELECT * from categories WHERE id = ". $id;
@@ -47,7 +48,7 @@ $category = $result->fetch_assoc();
             <label for="">Description</label>
             <input type="text" class="form-control" id="" placeholder="" name="description" value="<?php echo $category['description'];?>">
         </div>
-        <button type="submit" class="btn btn-primary">Create</button>
+        <button type="submit" class="btn btn-primary">Update</button>
     </form>
 </div>
 </body>
