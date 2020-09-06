@@ -1,31 +1,7 @@
 <?php
-//Thông số kết nối CSDL
-include '../helpers/sql.php';
-$categories = select('posts');
-//$conn = connect();
-////echo 'thành công!';
-////
-////die();
-//
-////Câu lệnh tru vấn
-//$query = 'SELECT * FROM posts WHERE 1';
-////$user_pwd = 1;
-////$query = "UPDATE `users` SET `id`= '1234' WHERE users.id = " .  $user_pwd;
-//
-////echo $query;
-////die();
-//// Thực thi câu lệnh
-//$result = $conn->query($query);
-//
-////tạo 1 mảng để chứa dữ liệu
-//$posts = array();
-//while ($row = $result->fetch_assoc()) {
-//    $posts[] = $row;
-//}
-//echo '<pre>';
-//var_dump($posts);
-//echo '</pre>';
-//die();
+include_once 'Category.php';
+$category_object = new Category();
+$categories = $category_object->getAll();
 ?>
 
 <!DOCTYPE html>

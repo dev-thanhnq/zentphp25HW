@@ -1,8 +1,12 @@
 <?php
 include 'connect.php';
+include_once 'connection.php';
 function select($table) {
     $query = "SELECT * FROM $table";
-    $conn = connect();
+//    $conn = connect();
+
+    $connection = new connection();
+    $conn = $connection->connect();
 //echo $query;
 
     $result = $conn->query($query);
@@ -40,7 +44,7 @@ function insert($table, $data) {
     $string = ' (' . $string_1 . ')' . ' VALUE ' . '(' . $string_2 . ')';
     $query = $query . $string;
 //    echo $query;
-//    $query = "INSERT INTO categories (name, thumbnail, slug, description) VALUE ('" . $data['name'] . "', '" . $data['thumbnail'] . "', '". $data['slug']. "', '". $data['description']. "')";
+//    $query = "INSERT INTO posts (name, thumbnail, slug, description) VALUE ('" . $data['name'] . "', '" . $data['thumbnail'] . "', '". $data['slug']. "', '". $data['description']. "')";
     $conn = connect();
     $status = $conn->query($query);
     return $status;

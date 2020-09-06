@@ -4,7 +4,7 @@ include 'connect.php';
 $conn = connect();
 $id = $_GET['id'];
 // Viết câu lệnh để thêm dữ liệu
-$query = "SELECT * from categories WHERE id = ". $id;
+$query = "SELECT * from posts WHERE id = ". $id;
 
 // Thực thi câu lệnh
 $result = $conn->query($query);
