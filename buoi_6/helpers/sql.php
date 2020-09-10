@@ -1,7 +1,8 @@
 <?php
 include 'connect.php';
 include_once 'connection.php';
-function select($table) {
+function select($table)
+{
     $query = "SELECT * FROM $table";
 //    $conn = connect();
 
@@ -22,7 +23,8 @@ function select($table) {
 
 }
 
-function insert($table, $data) {
+function insert($table, $data)
+{
     $query = "INSERT INTO $table";
 
     $string_1 = '';
@@ -50,29 +52,32 @@ function insert($table, $data) {
     return $status;
 }
 
-function delete($table, $id) {
+function delete($table, $id)
+{
     $conn = connect();
-    $query = "DELETE FROM $table WHERE id = ". $id;
+    $query = "DELETE FROM $table WHERE id = " . $id;
 //    echo $query;
     $status = $conn->query($query);
 }
 
-function select_edit($table, $id) {
+function select_edit($table, $id)
+{
     $conn = connect();
-    $query = "SELECT * from $table WHERE id = ". $id;
+    $query = "SELECT * from $table WHERE id = " . $id;
     $result = $conn->query($query);
 //    $user = $result->fetch_assoc();
     return $result->fetch_assoc();
 }
 
-function edit($table, $data) {
+function edit($table, $data)
+{
     $conn = connect();
     $query = "UPDATE $table SET ";
     $string = '';
     $i = 0;
     foreach ($data as $column => $value) {
         $i++;
-        if ($i>1) {
+        if ($i > 1) {
             $string .= $column . "='" . $value . "'";
             if ($i != count($data)) {
                 $string .= ", ";
@@ -89,8 +94,9 @@ function edit($table, $data) {
 //    return $status;
 }
 
-function showDetail($table, $id) {
-    $query = "SELECT * FROM $table WHERE id = ". $id;
+function showDetail($table, $id)
+{
+    $query = "SELECT * FROM $table WHERE id = " . $id;
     $conn = connect();
     $result = $conn->query($query);
     return $result->fetch_assoc();
