@@ -5,7 +5,7 @@ $act = $_GET['act'];
 $params = isset($_GET['id']) ? [$_GET['id']] : [];
 
 $class = ucfirst($mod) . 'Controller';
-$path = 'baseController/' . $class . '.php';
+$path = 'controller/' . $class . '.php';
 
 require_once $path;
 
