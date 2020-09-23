@@ -43,7 +43,7 @@ include_once 'view/admin/helper/header.php';
         <td><?php echo $post['title']?></td>
         <td><?php echo $post['description']?></td>
         <td><?php echo $post['thumbnail']?></td>
-        <td><?php echo '<a href="?mod=post&act=show&id=<?php echo $post["id"]?" class="btn btn-primary">Content</a>'; ?></td>
+        <td><a href="?mod=client&c=home&act=show&id=<?php echo $post["id"]; ?>" class="btn btn-primary">Content</a></td>
         <td><?php echo $post['user_id']?></td>
         <td><?php echo $post['category_id']?></td>
         <td><?php echo $post['slug']?></td>

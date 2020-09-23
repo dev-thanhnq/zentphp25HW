@@ -16,15 +16,6 @@ include_once 'view/admin/helper/header.php';
 			<textarea id="summernote" class="form-control form-control-user" value="<?php echo $post['content'] ?>" name="content"></textarea>
 		</div>
 		<div class="form-group">
-			<label>User ID</label>
-		  <select name="user_id" class="form-control form-control-user">
-		  	<?php foreach ($usersName as $key => $user) { 
-		  		?>
-		  		<option value="<?php echo $user['id'] ?>"><?php echo $user['id'] . ' - ' . $user['name']; ?></option>
-		  	<?php } ?>
-		  </select>
-		</div>
-		<div class="form-group">
 			<label>Category ID</label>
 		  <select name="category_id" class="form-control form-control-user">
 		  	<?php foreach ($categoriesName as $key => $category) { 

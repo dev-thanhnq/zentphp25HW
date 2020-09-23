@@ -36,8 +36,8 @@ include_once 'view/client/helper/mainheader.php';
             <li><a href="#">&lt;</a></li>
             <li class=""><a href="?mod=client&c=home&act=index">1</a></li>
             <li><a href="?mod=client&c=home&act=index&page=2">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
+            <li><a href="?mod=client&c=home&act=index&page=3">3</a></li>
+            <li><a href="?mod=client&c=home&act=index&page=4">4</a></li>
             <li><a href="#">5</a></li>
             <li><a href="#">&gt;</a></li>
           </ul>

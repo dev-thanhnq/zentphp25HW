@@ -44,8 +44,8 @@ class Model
         }
         $string = ' (' . $string_1 . ')' . ' VALUE ' . '(' . $string_2 . ')';
         $query = $query . $string;
-        echo $query;
-        die();
+        // echo $query;
+        // die();
         $status = $this->conn->query($query);
         return $status;
     }
@@ -83,10 +83,8 @@ class Model
                 $string .= " WHERE id = " . $id;
             }
         }
-
         $query = $query . $string;
         $status = $this->conn->query($query);
-
         return $status;
     }
 

@@ -18,7 +18,7 @@ class HomeClientController extends ClientController
 
 	public function index($page)
 	{
-		$posts = $this->model->indexLimit($page, '4');
+		$posts = $this->model->indexLimit($page, '6');
 		$categories = $this->categoryModel->selectAll();
 		$this->view('client/main.php', [
 			'posts' => $posts, 

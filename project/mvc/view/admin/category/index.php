@@ -39,7 +39,7 @@ include_once 'view/admin/helper/header.php';
         <td><?php echo $category['slug']?></td>
         <td><?php echo $category['created_at']?></td>
         <td>
-            <a href="?mod=post&act=show&id=<?php echo $post['id']?>" class="btn btn-primary">Blog</a>
+            <a href="?mod=client&c=home&act=showPostsCategory&id=<?php echo $category['id']?>" class="btn btn-primary">Blog</a>
             <a href="?mod=admin&c=category&act=getFormEdit&id=<?php echo $category['id']?>" class="btn btn-success">Edit</a>
             <a href="?mod=admin&c=category&act=delete&id=<?php echo $category['id']?>" class="btn btn-danger">Delete</a>
         </td>

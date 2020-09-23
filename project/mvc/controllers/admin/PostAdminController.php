@@ -54,7 +54,6 @@ class PostAdminController extends AdminController
     {
         $post = $this->model->selectEditPost($id);
         $categoriesName = $this->model->selectCategoriesName();
-        $usersName = $this->model->selectUsersName();
         $this->view('admin/post/edit.php', [
             'post' => $post, 
             'categoriesName' => $categoriesName,
